@@ -9,9 +9,9 @@
                     <div class="beta-products-list">
                         <h4>Sản phẩm</h4>
                         <br>
-                        <div class="row">
+                        <div class="row" style="display: flex; flex-wrap: wrap;">
                             @foreach($product as $new)
-                            <div class="col-sm-3">
+                            <div class="col-sm-3" style="margin-top: 20px">
                                 <div class="single-item">
                                     <div class="single-item-header">
                                         <a href="{{route('productDetail', $new->id)}}"><img src="source/image/product/{{$new->image}}" alt="" height="250px"></a>
@@ -28,7 +28,7 @@
                                         </p>
                                     </div>
                                     <div class="single-item-caption">
-                                        <a class="add-to-cart pull-left" href="{{route('add-to-cart', $new->id)}}"><i class="fa fa-shopping-cart"></i></a>
+                                        <a class="add-to-cart pull-left" href=""><i class="fa fa-shopping-cart"></i></a>
                                         <a class="beta-btn primary" href="{{route('productDetail', $new->id)}}">Chi tiết<i class="fa fa-chevron-right"></i></a>
                                         <div class="clearfix"></div>
                                     </div>
