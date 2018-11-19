@@ -21,17 +21,18 @@
 				<input type="hidden" name="_token" value="{{csrf_token()}}">
 				<div class="row">
 					<div class="col-sm-3"></div>
-					@if(count($errors)>0)
-						<div class="alert alert-danger">
-							@foreach($errors->all() as $err)
-								{{$err}}
-							@endforeach
-						</div>
-					@endif
-					@if(Session::has('success'))
-						<div class="alert alert-success">{{Session::get('success')}}</div>
-					@endif
+					
 					<div class="col-sm-6">
+						@if(count($errors)>0)
+							<div class="alert alert-danger">
+								@foreach($errors->all() as $err)
+									{{$err}}
+								@endforeach
+							</div>
+						@endif
+						@if(Session::has('success'))
+							<div class="alert alert-success">{{Session::get('success')}}</div>
+						@endif
 						<h4>Đăng ký </h4>
 						<div class="space20">&nbsp;</div>
 
@@ -57,12 +58,12 @@
 							<input type="text" id="phone" name="phone">
 						</div>
 						<div class="form-block">
-							<label for="phone">Mật Khẩu*</label>
-							<input type="password" id="password" name="password" required>
+							<label for="password">Mật Khẩu*</label>
+							<input type="password" id="password" name="password" required style = "height: 37px; border: 1px solid #e1e1e1; padding: 0 12px;">
 						</div>
 						<div class="form-block">
-							<label for="phone">Nhập Lại Mật Khẩu*</label>
-							<input type="password" id="re_password" name="re_password" required>
+							<label for="re_password">Nhập Lại Mật Khẩu*</label>
+							<input type="password" id="re_password" name="re_password" required style = "height: 37px; border: 1px solid #e1e1e1; padding: 0 12px;">
 						</div>
 						<div class="form-block">
 							<button type="submit" class="btn btn-primary">Đăng ký</button>
